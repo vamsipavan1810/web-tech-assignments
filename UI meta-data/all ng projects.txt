@@ -1,0 +1,79 @@
+Hey, I want to create an employee angular project using command "ng new emp-app"
+
+whenever i start the application, it should go to the login page.
+
+loginpage contains email, password and option to go to registration page also.
+registration page contains username, email, password, confirm password, mobile number.
+for both login page and registration page it should validate the data (email format, (username no space and only lowercase alphabets, password should contains atleast 8 characters and mobile number should be only digits, exactly 10 digits, mobile numbers starts with digit 6 to 9 only using regex) and password should be same was confirm password) and login/registration page's submit button enables only when the data matches.
+
+when ever we register, that username, password, mobile number should be stored in local storage. when we are login, that user input email and password should be validated with the data stored in localstorage and authenticated, and we are using JWT also.
+
+from login page we have navigation to register page, from registration page we have navigation to login page. If we register with valid data, it will store data in local storage and navigate to login page. and then we neeed to login with that data. Then it will use authService authentication and if it is valid data, then using JWT and store it in local storage and login, and open the home page. That home page contains hardcoded 10 employee details (ID, Name, Age, Designation, Address).
+
+and at the top right, there will be an option for view profile. If we click there, then it will display current user details (username, email, mobile number) and there should be an option in the profile page for logout (JWT token should be expired/removed from localstorage, navigate to login page)
+
+use route gaurds. and only login user can go to homepage (dashborad page contains hard coded 10 employees).
+
+and when ever we logout, the jwt token removed from localstorage, user should be logouted, it will navigate to login page, and user details should be present in the localstorage. and if i enter same login details , then new jwt token should be created and it should login and works as we expected.
+
+and localstorage data gets changes when we are registering for another user.
+
+just remember these versions also 
+
+
+C:\Users\v.yalla>node -v
+v24.19.0
+
+C:\Users\v.yalla>npm -v
+11.17.0
+
+C:\Users\v.yalla>ng v
+
+     _                      _                 ____ _     ___
+    / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+   / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+  / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+ /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+                |___/
+
+
+Angular CLI       : 22.1.6
+Node.js           : 24.19.0
+Package Manager   : npm 11.17.0
+Operating System  : win32 x64
+
+
+
+when i create a component using "ng g c alias" it will create 1 folder contains 4 files (alias.css, alias.html, alias.spec.ts, alias.ts)
+when i create a service using "ng g s alias" it will create 1 folder contains 2 files (alias.spec.ts, alias.ts)
+when i create a guard using "ng g guard alias" it will create 1 folder contains 2 files (alias-guard.spec.ts, alias-guard.ts)
+when i create a pipe using "ng g p alias" it will create 1 folder contains 2 files (alias-pipe.spec.ts, alias-pipe.ts)
+
+keep them in mind.
+
+we have to use "commands to generate components, service, diretives, pipes, guards, lazy loading modules" if any where we needed these.
+
+and for CSS, out styles.css should contains :root and ::selection. and all the colors should be declared in :root. except here, we are not using hard coded colour any where in our whole application. and if i want to change the coloring in our application, we need to change only that :root in the styles.css, and we have to use those colour variables in all the other css files.
+lets make our css as beautiful, wounderful, excellent. add animations if needed. and add responsiveness also for our application (phone , tab , laptop) using media.
+
+lets build the application and then we need to perform "Locally server the projects using ng serve and take optimized build using ng prod --build" and "Generate war file using build commands inside dist folder. Explore angular build commands in google"
+
+and the below should get satisfied by our application :
+To create dynamic  web page to cover Authentication, Tokenization & Security, Best Practices for Performance Efficiency
+{CORS, Custom ERROR Codes}
+Create router module and create a router link between Employee data and Employee login page
+Using router outlet inject all pages in root component.
+Create Auth Guard for Employee login and allow employee to access Employee after auth guard resolution
+Create Authorization & content type headers to support CORS policy
+Generate static Json web token and send across headers to support session time & API level security 
+Run build command and generate war file inside dist folder 
+
+when i login, it was going to dashboard (/home) its good.
+and there should be a button at right top to go to profile.
+and when i click on that button, it should go to profile page, and there is no need to keep view profile option in profile page.
+and logout at top right is fine, no need of "Logout & Clear Token" button at the center of the content.
+
+when ever i click on logout, it should ask me to confirm logout. it should logout only when i accept it.
+
+
+guide me from the beggining to the end.

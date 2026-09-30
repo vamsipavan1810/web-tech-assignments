@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1>Course Feedback Form</h1>
+            <p class="subtitle">We would love to hear your feedback about the course.</p>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        pattern="[A-Za-z ]+"
+                        title="Name should contain only letters and spaces"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@email.com"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input
+                        type="tel"
+                        id="mobile"
+                        name="mobile"
+                        placeholder="Enter 10-digit mobile number"
+                        pattern="[0-9]{10}"
+                        maxlength="10"
+                        inputmode="numeric"
+                        title="Mobile number must contain exactly 10 digits"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course Name</label>
+                    <select id="course" name="course" required>
+                        <option value="">Select a course</option>
+                        <option value="html-css">HTML & CSS</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="instructor">Instructor Name</label>
+                    <input
+                        type="text"
+                        id="instructor"
+                        name="instructor"
+                        placeholder="Enter instructor name"
+                        pattern="[A-Za-z ]+"
+                        title="Instructor name should contain only letters and spaces"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="rating">How would you rate the course?</label>
+                    <select id="rating" name="rating" required>
+                        <option value="">Select your rating</option>
+                        <option value="5">★★★★★ - Excellent</option>
+                        <option value="4">★★★★ - Very Good</option>
+                        <option value="3">★★★ - Good</option>
+                        <option value="2">★★ - Average</option>
+                        <option value="1">★ - Poor</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="difficulty">Course Difficulty</label>
+                    <select id="difficulty" name="difficulty" required>
+                        <option value="">Select difficulty</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Would you recommend this course?</label>
+                    <div class="radio-group">
+                        <label>
+                            <input
+                                type="radio"
+                                name="recommend"
+                                value="yes"
+                                required>
+                            Yes
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="recommend"
+                                value="no">
+                            No
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="recommend"
+                                value="maybe">
+                            Maybe
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="feedback">Your Feedback</label>
+                    <textarea
+                        id="feedback"
+                        name="feedback"
+                        rows="6"
+                        placeholder="Please share your experience..."
+                        minlength="10"
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="suggestions">Suggestions for Improvement</label>
+                    <textarea
+                        id="suggestions"
+                        name="suggestions"
+                        rows="5"
+                        placeholder="How can we improve this course?"
+                    ></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

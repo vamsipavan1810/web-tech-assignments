@@ -1,0 +1,201 @@
+:root {
+    --bg-color: #042644;
+    --card-color: #1372c5;
+    --input-color: #12466d;
+
+    --primary-color: #7dd3f8;
+    --primary-hover: #0ea5e9;
+    --button-color: #043e6d;
+    --button-hover:#288fe4;
+
+    --text-color: #f1f5f9;
+    --label-color: #dbeafe;
+    --muted-color: #9fb3c8;
+
+    --border-color: #416078;
+    --error-color: #f87171;
+
+    --shadow-color: rgb(2, 2, 2);
+    --focus-shadow: rgba(56, 189, 248, 0.2);
+    --button-shadow: rgb(255, 255, 255);
+}
+
+::selection {
+    background-color: var(--bg-color);
+    color: var(--primary-hover);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    padding: 50px 20px;
+    color: var(--text-color);
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    animation: fadeIn 0.7s ease;
+}
+
+.form-box {
+    background-color: var(--card-color);
+    padding: 45px 55px;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    box-shadow: 10px 10px 5px var(--shadow-color);
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--muted-color);
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+    animation: slideUp 0.5s ease;
+}
+
+.form-group > label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--label-color);
+    margin-bottom: 8px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+    font-family: inherit;
+    background-color: var(--input-color);
+    color: var(--text-color);
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--muted-color);
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, select:focus, textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px var(--focus-shadow);
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:valid, select:valid, textarea:valid {
+    border-color: var(--border-color);
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: var(--error-color);
+}
+
+.radio-group {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.radio-group label {
+    font-weight: normal;
+    color: var(--muted-color);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.radio-group label:hover {
+    color: var(--primary-color);
+}
+
+.radio-group input {
+    margin-right: 6px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--button-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-5px);
+    color: #000000;
+    box-shadow: 5px 5px 2px var(--button-shadow);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .form-box {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
